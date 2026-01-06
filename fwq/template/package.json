@@ -1,0 +1,33 @@
+{
+  "name": "flux-player-app",
+  "version": "1.0.0",
+  "description": "FluxPlayer Desktop Runtime",
+  "main": "main.js",
+  "author": "FluxUser",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win --x64",
+    "build:mac": "electron-builder --mac --x64",
+    "build:linux": "electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.fluxplayer.desktop",
+    "productName": "FluxPlayer",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {}
+}
